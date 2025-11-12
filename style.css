@@ -1,0 +1,231 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    line-height: 1.6;
+    color: #333;
+}
+
+.bg {
+    background: #FFC3A1;
+    padding: 40px 20px;
+}
+.cor {
+    background-color: #A75D5D;
+    color: #ffffff;
+}
+.cor2 {
+    background-color: #D3756B;
+    color: #ffffff;
+}
+
+.fonte {
+    font-family: 'Dancing Script', cursive;
+}
+
+.tm-social {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+.tm-social:hover {
+    transform: scale(1.15);
+}
+
+.imagem {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.imagem:hover {
+    transform: scale(1.1);
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+}
+
+.page-header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; 
+}
+
+.page-header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.page-header nav a:hover {
+    border-color: #FFC3A1;
+}
+
+.page-footer {
+    padding: 30px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px; 
+    margin-bottom: 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.hero-section {
+    text-align: center;
+}
+.hero-section h2 {
+    font-size: 3rem;
+}
+.hero-section hr {
+    width: 100px;
+    margin: 10px auto;
+    border: 1px solid #A75D5D;
+}
+.hero-section p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery {
+    padding: 40px 20px;
+}
+
+.gallery-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.gallery-content p {
+    font-size: 1.1rem;
+}
+
+
+.contact-form-section {
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-size: 3rem;
+}
+
+.contact-form-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #A75D5D;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #D3756B;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #A75D5D;
+}
+
+.btn {
+    padding: 12px;
+    background-color: #A75D5D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #D3756B;
+}
+
+@media (max-width: 768px) {
+
+    .page-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .page-header nav ul {
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .gallery-article {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+    .gallery-article.reverse .imagem {
+        grid-row: 1;
+    }
+
+    .gallery-article.reverse .gallery-content {
+        grid-row: 2; 
+    }
+}
